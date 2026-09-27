@@ -7,6 +7,7 @@ import AddExpense from "./pages/AddExpense";
 import ExpenseList from "./pages/ExpenseList";
 import EditExpense from "./pages/EditExpense";
 import ProtectedRoute from "./ProtectedRoute";
+import { Navigate } from "react-router-dom";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
       <Routes>
 
         {/* Public Routes */}
+
+        <Route
+          path="/"
+          element={<Navigate to="/login" replace />}
+        />
 
         <Route
           path="/login"
